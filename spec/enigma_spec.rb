@@ -54,6 +54,15 @@ RSpec.describe Enigma do
   it "finds dates last four" do
     enigma = Enigma.new
 
-    expect(enigma.square_date_last_four).to eq(4441)
+    expect(enigma.square_date_last_four).to eq("4441")
+  end
+
+  it "finds offset values" do
+    enigma = Enigma.new
+
+    expect(enigma.find_offset_values["A"]).to eq("4")
+    expect(enigma.find_offset_values["B"]).to eq("4")
+    expect(enigma.find_offset_values["C"]).to eq("4")
+    expect(enigma.find_offset_values["D"]).to eq("1")
   end
 end

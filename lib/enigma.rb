@@ -36,8 +36,17 @@ class Enigma
 
   def square_date_last_four
     offset = square_the_date.to_s[-4..-1]
-    offset.to_i
+    offset
+  end
 
+  def find_offset_values
+    offset_values = {}
+    offset_values["A"] = square_date_last_four[0]
+    offset_values["B"] = square_date_last_four[1]
+
+    offset_values["C"] = square_date_last_four[2]
+    offset_values["D"] = square_date_last_four[3]
+    offset_values
   end
 
 end
