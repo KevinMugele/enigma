@@ -9,31 +9,24 @@ class ShiftCreator
     offset
   end
 
-  def find_offset_values
-    offset_values = {}
-    offset_values["A"] = square_number_last_four[0]
-    offset_values["B"] = square_number_last_four[1]
-
-    offset_values["C"] = square_number_last_four[2]
-    offset_values["D"] = square_number_last_four[3]
-    offset_values
+  def find_offset_values(date)
+    square_number_last_four(square_number(date))
   end
 
-  def find_keys(number)
-    find_keys = {}
-    find_keys["A"] = number.to_i[0..1]
-    find_keys["B"] = number.to_i[1..2]
-    find_keys["C"] = number.to_i[2..3]
-    find_keys["D"] = number.to_i[3..4]
-    find_keys
+  def split_keys(number)
+    keys = []
+    number.each_cons(2).map do |pair|
+      keys << pair.to_i
+    end
+    keys
   end
 
   def find_shift_values
     shift_values = {}
-    shift_values["A"] = find_keys["A"].to_i + find_offset_values["A"].to_i
-    shift_values["B"] = find_keys["B"].to_i + find_offset_values["B"].to_i
-    shift_values["C"] = find_keys["C"].to_i + find_offset_values["C"].to_i
-    shift_values["D"] = find_keys["D"].to_i + find_offset_values["D"].to_i
+    shift_values["A"] = split_keys[0] + find_offset_values[0]
+    shift_values["B"] = split_keys[1] + find_offset_values[1]
+    shift_values["C"] = split_keys[2] + find_offset_values[2]
+    shift_values["D"] = split_keys[3] + find_offset_values[3]
     shift_values
   end
 end
