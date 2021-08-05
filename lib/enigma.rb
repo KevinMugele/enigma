@@ -29,4 +29,15 @@ class Enigma
     Date.today.strftime("%m%d%Y")
   end
 
+  def square_the_date
+    today = get_todays_date.to_i
+    (today * today)
+  end
+
+  def square_date_last_four
+    offset = square_the_date.to_s[-4..-1]
+    offset.to_i
+
+  end
+
 end

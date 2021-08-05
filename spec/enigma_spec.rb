@@ -44,4 +44,16 @@ RSpec.describe Enigma do
     expect(enigma.find_index("f")).to eq(5)
     expect(enigma.find_index(" ")).to eq(26)
   end
+
+  it "squares the date" do
+    enigma = Enigma.new
+
+    expect(enigma.square_the_date).to eq(64835042184441)
+  end
+
+  it "finds dates last four" do
+    enigma = Enigma.new
+
+    expect(enigma.square_date_last_four).to eq(4441)
+  end
 end
