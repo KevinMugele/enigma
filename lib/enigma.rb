@@ -3,6 +3,7 @@ require './lib/indexable'
 
 class Enigma
   include Indexable
+  
 #Keys
   def generate_key
     "0" + rand(1000..9999).to_s
