@@ -14,6 +14,7 @@ class Enigma
     find_keys["B"] = generate_key.to_i[1..2]
     find_keys["C"] = generate_key.to_i[2..3]
     find_keys["D"] = generate_key.to_i[3..4]
+    find_keys
   end
 
 #Offset
@@ -39,6 +40,23 @@ class Enigma
     offset_values["C"] = square_date_last_four[2]
     offset_values["D"] = square_date_last_four[3]
     offset_values
+  end
+
+#Shifts
+  def a_shift
+    find_keys["A"].to_i + find_offset_values["A"].to_i
+  end
+
+  def b_shift
+    find_keys["B"].to_i + find_offset_values["B"].to_i
+  end
+
+  def c_shift
+    find_keys["C"].to_i + find_offset_values["C"].to_i
+  end
+
+  def d_shift
+    find_keys["D"].to_i + find_offset_values["D"].to_i
   end
 
 end

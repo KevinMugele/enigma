@@ -65,4 +65,13 @@ RSpec.describe Enigma do
     expect(enigma.find_offset_values["C"]).to eq("4")
     expect(enigma.find_offset_values["D"]).to eq("1")
   end
+
+  xit "finds shift values for a,b,c,d" do 
+    enigma = Enigma.new
+
+    expect(enigma.a_shift).to eq(123)
+    expect(enigma.b_shift).to eq(123)
+    expect(enigma.c_shift).to eq(123)
+    expect(enigma.d_shift).to eq(123)
+  end
 end
