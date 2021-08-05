@@ -17,6 +17,12 @@ RSpec.describe Enigma do
   it "generates random keys" do
     enigma = Enigma.new
 
-    expect(enigma.generate.length).to eq 5
+    expect(enigma.generate_key.length).to eq 5
+  end
+
+  it "generates array for indexes" do
+    enigma = Enigma.new
+
+    expect(enigma.create_index.length).to eq(27)
   end
 end
