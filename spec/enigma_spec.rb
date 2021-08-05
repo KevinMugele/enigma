@@ -25,4 +25,12 @@ RSpec.describe Enigma do
 
     expect(enigma.create_index.length).to eq(27)
   end
+
+  it "finds index number" do
+    enigma = Enigma.new
+
+    expect(enigma.find_index("a")).to eq(0)
+    expect(enigma.find_index("f")).to eq(5)
+    expect(enigma.find_index(" ")).to eq(26)
+  end
 end
