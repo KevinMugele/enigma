@@ -1,4 +1,4 @@
-class Shift
+class ShiftCreator
 
   def square_number(number)
     number.to_i * number.to_i
