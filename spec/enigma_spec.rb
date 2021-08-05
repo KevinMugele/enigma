@@ -20,6 +20,17 @@ RSpec.describe Enigma do
     expect(enigma.generate_key.length).to eq 5
   end
 
+  xit "generates specific a/b/c/d key" do
+    enigma = Enigma.new
+
+    allow(enigma).to receive(generate_key).and_return("01234")
+
+    expect(enigma.a_key).to eq 01
+    expect(enigma.b_key).to eq 12
+    expect(enigma.c_key).to eq 23
+    expect(enigma.d_key).to eq 45
+  end
+
   it "generates array for indexes" do
     enigma = Enigma.new
 

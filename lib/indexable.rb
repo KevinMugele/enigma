@@ -5,6 +5,6 @@ module Indexable
 
   def find_index(char)
     create_index.index(char)
-  end 
+  end
 
 end
