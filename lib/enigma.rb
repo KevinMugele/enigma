@@ -1,6 +1,9 @@
+require 'date'
+
 class Enigma
 
-  def initialize
+  def get_todays_date
+    Date.today.strftime("%m/%d/%Y")
   end
 
 end

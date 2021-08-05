@@ -7,4 +7,10 @@ RSpec.describe Enigma do
 
     expect(enigma).to be_a Enigma
   end
+
+  it "#get_todays_date" do
+    enigma = Enigma.new
+
+    expect(enigma.get_todays_date).to eq("08/05/2021")
+  end
 end
