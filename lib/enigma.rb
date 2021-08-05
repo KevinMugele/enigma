@@ -8,20 +8,12 @@ class Enigma
     "0" + rand(1000..9999).to_s
   end
 
-  def a_key
-    generate_key.to_i[0..1]
-  end
-
-  def a_key
-    generate_key.to_i[1..2]
-  end
-
-  def a_key
-    generate_key.to_i[2..3]
-  end
-
-  def d_key
-    generate_key.to_i[3..4]
+  def find_keys
+    find_keys = {}
+    find_keys["A"] = generate_key.to_i[0..1]
+    find_keys["B"] = generate_key.to_i[1..2]
+    find_keys["C"] = generate_key.to_i[2..3]
+    find_keys["D"] = generate_key.to_i[3..4]
   end
 
 #Offset
