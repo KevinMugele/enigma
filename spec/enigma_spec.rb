@@ -11,6 +11,12 @@ RSpec.describe Enigma do
   it "#get_todays_date" do
     enigma = Enigma.new
 
-    expect(enigma.get_todays_date).to eq("08/05/2021")
+    expect(enigma.get_todays_date).to eq("08052021")
+  end
+
+  it "generates random keys" do
+    enigma = Enigma.new
+
+    expect(enigma.create_random_keys.length).to eq 5
   end
 end
