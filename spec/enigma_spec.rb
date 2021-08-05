@@ -17,6 +17,6 @@ RSpec.describe Enigma do
   it "generates random keys" do
     enigma = Enigma.new
 
-    expect(enigma.create_random_keys.length).to eq 5
+    expect(enigma.generate.length).to eq 5
   end
 end

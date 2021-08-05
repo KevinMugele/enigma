@@ -2,7 +2,7 @@ require 'date'
 
 class Enigma
 #Keys
-  def create_random_keys
+  def generate_key
     "0" + rand(1000..9999).to_s
   end
 
