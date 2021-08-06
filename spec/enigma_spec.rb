@@ -1,5 +1,9 @@
+require './spec/spec_helper'
 require 'date'
 require './lib/enigma'
+require './lib/shift_creator'
+require './lib/message_shift'
+require './lib/indexable'
 
 RSpec.describe Enigma do
   it "exists" do
@@ -18,6 +22,12 @@ RSpec.describe Enigma do
     enigma = Enigma.new
 
     expect(enigma.generate_key.length).to eq 5
+  end
+
+  it "generates random keys" do
+    enigma = Enigma.new
+
+    expect(enigma.encrypt("Hello World", "02715", "040895")).to eq({"date"=>"040895", "encryption"=>"keder ohulw", "key"=>"02715"})
   end
 
 end
