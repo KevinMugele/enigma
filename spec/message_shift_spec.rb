@@ -6,19 +6,16 @@ require './lib/indexable'
 
 RSpec.describe MessageShift do
   it "exists and has attributes" do
-    shift_creator = ShiftCreator.new
-    message_shifter = MessageShift.new("Hello World", shift_creator.find_shift_values("04223", "8152021"))
+    message_shifter = MessageShift.new("Hello World")
 
     expect(message_shifter).to be_a MessageShift
-    expect(message_shifter.message).to eq("Hello World")
-    expect(message_shifter.shift_values).to eq({"A"=>6, "B"=>46, "C"=>30, "D"=>24})
+    expect(message_shifter.message).to eq("hello world")
   end
 
   it "can shift a character" do
-    shift_creator = ShiftCreator.new
-    message_shifter = MessageShift.new("Hello World", shift_creator.find_shift_values("04223", "8152021"))
+    message_shifter = MessageShift.new("Hello World")
 
-    expect(message_shifter.shift_message(shift_values)).to eq()
+    expect(message_shifter.shift_message("02715", "040895")).to eq("keder ohulw")
   end
 
 end
