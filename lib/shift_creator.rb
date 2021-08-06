@@ -1,29 +1,25 @@
 class ShiftCreator
 
-  def square_number(number)
+  def self.square_number(number)
     number.to_i * number.to_i
   end
 
-  def square_number_last_four(number)
+  def self.square_number_last_four(number)
     square_number(number).to_s[-4..-1]
   end
 
-  def find_offset_values(date)
-    square_number_last_four(square_number(date))
-  end
-
-  def split_keys(number)
+  def self.split_keys(number)
     number.chars.each_cons(2).map do |pair|
       pair.join.to_i
     end
   end
 
-  def find_shift_values(number, date)
+  def self.find_shift_values(number, date)
     shift_values = {}
-    shift_values["A"] = split_keys(number)[0] + find_offset_values(date)[0].to_i
-    shift_values["B"] = split_keys(number)[1] + find_offset_values(date)[1].to_i
-    shift_values["C"] = split_keys(number)[2] + find_offset_values(date)[2].to_i
-    shift_values["D"] = split_keys(number)[3] + find_offset_values(date)[3].to_i
+    shift_values["A"] = split_keys(number)[0] + square_number_last_four(date)[0].to_i
+    shift_values["B"] = split_keys(number)[1] + square_number_last_four(date)[1].to_i
+    shift_values["C"] = split_keys(number)[2] + square_number_last_four(date)[2].to_i
+    shift_values["D"] = split_keys(number)[3] + square_number_last_four(date)[3].to_i
     shift_values
   end
 end
