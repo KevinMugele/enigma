@@ -4,9 +4,8 @@ class ShiftCreator
     number.to_i * number.to_i
   end
 
-  def square_number_last_four
-    offset = square_number.to_s[-4..-1]
-    offset
+  def square_number_last_four(number)
+    square_number(number).to_s[-4..-1]
   end
 
   def find_offset_values(date)
@@ -14,11 +13,9 @@ class ShiftCreator
   end
 
   def split_keys(number)
-    keys = []
-    number.each_cons(2).map do |pair|
-      keys << pair.to_i
-    end
-    keys
+    number.chars.each_cons(2).map do |pair|
+      pair.join.to_i
+    end 
   end
 
   def find_shift_values
