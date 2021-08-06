@@ -10,5 +10,4 @@ module Indexable
   def find_char(index)
     create_index[index]
   end 
-
 end

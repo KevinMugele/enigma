@@ -1,6 +1,6 @@
 class CommandLine
 
-  attr_reader :input, :output, :message
+  attr_reader :input, :output, :message, :key, :date
 
   def initialize(argv)
     @input = argv[0]
