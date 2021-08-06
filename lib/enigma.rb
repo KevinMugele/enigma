@@ -1,6 +1,7 @@
 require 'date'
 require './lib/indexable'
 require './lib/shift_creator'
+require './lib/message_shift'
 
 class Enigma
   include Indexable
@@ -15,8 +16,9 @@ class Enigma
   end
 
   def encrypt(message, key = generate_key, date = get_todays_date)
+    message_shifter = MessageShift.new(message)
     encrypt = {}
-    encrypt[encryption] = #ENCRYPTED MESSAGE
+    encrypt[encryption] = message_shifter.shift_message(key, date)
     encrypt[key] = key
     encrypt[date] = date
   end
