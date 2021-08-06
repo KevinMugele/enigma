@@ -26,9 +26,9 @@ class Enigma
   def decrypt(message, key, date)
     message_shifter = MessageShift.new(message)
     decrypt = {}
-    encrypt["decryption"] = message_shifter.shift_message(key, date)
-    encrypt["key"] = key
-    encrypt["date"] = date
+    decrypt["decryption"] = message_shifter.decrypt_message(message, key, date)
+    decrypt["key"] = key
+    decrypt["date"] = date
     decrypt
   end
 
