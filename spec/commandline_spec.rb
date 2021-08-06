@@ -1,4 +1,3 @@
-require './spec/spec_helper'
 require 'date'
 require './lib/commandline'
 require './lib/enigma'
