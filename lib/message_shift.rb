@@ -41,10 +41,10 @@ class MessageShift
     find_char(new_value)
   end
 
-  def decrypt_message(number, date)
+  def decrypt_message(message, number, date)
     shifter = 0
     shift_values = create_shift_values(number, date)
-    decrypted = @message.chars.map do |letter|
+    decrypted = message.chars.map do |letter|
       if shifter == 0
         shifter += 1
         decrypt_char(letter, shift_values["A"])
@@ -59,7 +59,7 @@ class MessageShift
         decrypt_char(letter, shift_values["D"])
       end
     end
-    encrypted.join
+    decrypted.join
   end
 
   def decrypt_char(letter, shift_value)

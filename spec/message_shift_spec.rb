@@ -13,10 +13,18 @@ RSpec.describe MessageShift do
     expect(message_shifter.message).to eq("hello world")
   end
 
-  it "can shift a character" do
+  it "can shift a message" do
     message_shifter = MessageShift.new("Hello World")
 
     expect(message_shifter.shift_message("02715", "040895")).to eq("keder ohulw")
   end
+
+  it "can decrypt a message" do
+    message_shifter = MessageShift.new("Hello World")
+
+    expect(message_shifter.decrypt_message("keder ohulw", "02715", "040895")).to eq("hello world")
+  end
+
+
 
 end
