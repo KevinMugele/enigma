@@ -38,6 +38,6 @@ RSpec.describe ShiftCreator do
   it "finds shift values" do
     shift_creator = ShiftCreator.new
 
-    expect(shift_creator.find_shift_values("04223", "8152021")).to eq({"A"=>6, "B"=>46, "C"=>30, "D"=>24}
+    expect(shift_creator.find_shift_values("04223", "8152021")).to eq({"A"=>6, "B"=>46, "C"=>30, "D"=>24})
   end
 end
