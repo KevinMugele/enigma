@@ -13,8 +13,10 @@ class CommandLine
     File.write(output, new_message)
   end
 
-  def message_to_terminal
-    "Created #{output} with the key    and date "
+  def encrypt_message
+    encrypted = @enigma.encrypt(@message)
+    write_to_file(@output, encrypted["encryption"])
+    "Created '#{output}'' with the key #{encrypted["key"]} and date #{encrypted["date"]}"
   end
 
 

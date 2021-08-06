@@ -7,4 +7,4 @@ require './lib/enigma'
 input = ARGV
 
 command_line = CommandLine.new(input)
-puts command_line.message_to_terminal
+puts command_line.encrypt_message
