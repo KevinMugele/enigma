@@ -26,12 +26,18 @@ RSpec.describe ShiftCreator do
   it "finds offset value based off date" do
     shift_creator = ShiftCreator.new
 
-    expect(shift_creator.find_offset_values(8152021)).to eq("2481")
+    expect(shift_creator.find_offset_values("8152021")).to eq("2481")
   end
 
   it "splits keys" do
     shift_creator = ShiftCreator.new
 
     expect(shift_creator.split_keys("04223")).to eq([04, 42, 22, 23])
+  end
+
+  it "finds shift values" do
+    shift_creator = ShiftCreator.new
+
+    expect(shift_creator.find_shift_values("04223", "8152021")).to eq({"A"=>6, "B"=>46, "C"=>30, "D"=>24}
   end
 end
