@@ -1,5 +1,8 @@
 require './spec/spec_helper'
 require './lib/enigma'
+require './lib/indexable'
+require './lib/shift_creator'
+require './lib/message_shift'
 
 RSpec.describe Enigma do
   it "exists" do
