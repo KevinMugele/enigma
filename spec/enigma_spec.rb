@@ -1,8 +1,9 @@
 require './spec/spec_helper'
+require 'date'
 require './lib/enigma'
-require './lib/indexable'
 require './lib/shift_creator'
 require './lib/message_shift'
+require './lib/indexable'
 
 RSpec.describe Enigma do
   it "exists" do
@@ -52,5 +53,27 @@ RSpec.describe Enigma do
     encrypted = enigma.encrypt("hello world", "02715")
 
     expect(enigma.decrypt(encrypted["encryption"], "02715")).to eq({"date"=>"080721", "decryption" => "hello world", "key"=>"02715"})
+  end
+
+  it "#create_index" do
+    enigma = Enigma.new
+
+    expect(enigma.create_index).to eq(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "])
+  end
+
+  it "#find_index(char)" do
+    enigma = Enigma.new
+
+    expect(enigma.find_index("a")).to eq(0)
+    expect(enigma.find_index("d")).to eq(3)
+    expect(enigma.find_index(" ")).to eq(26)
+  end
+
+  it "#find_char(index)" do
+    enigma = Enigma.new
+
+    expect(enigma.find_char(0)).to eq("a")
+    expect(enigma.find_char(6)).to eq("g")
+    expect(enigma.find_char(26)).to eq(" ")
   end
 end

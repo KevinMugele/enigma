@@ -26,8 +26,4 @@ class CommandLine
     write_to_file(@output, decrypted["decryption"])
     "Created '#{output}'' with the key #{decrypted["key"]} and date #{decrypted["date"]}"
   end
-
-
-
-
 end
