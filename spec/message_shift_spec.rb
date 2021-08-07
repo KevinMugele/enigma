@@ -24,4 +24,10 @@ RSpec.describe MessageShift do
 
     expect(message_shifter.decrypt_message("keder ohulw", "02715", "040895")).to eq("hello world")
   end
+
+  it "finds_crack_key" do
+    message_shifter = MessageShift.new("keder ohulwthnw")
+
+    expect(message_shifter.find_crack_key("040895")).to eq({})
+  end 
 end

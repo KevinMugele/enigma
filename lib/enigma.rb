@@ -31,4 +31,13 @@ class Enigma
     decrypt["date"] = date
     decrypt
   end
+
+  def crack(message, date = get_todays_date)
+    message_shifter = MessageShift.new(message)
+    cracked = {}
+    cracked["decryption"] = message_shifter.crack_message(message, date)
+    cracked["key"] = key
+    cracked["date"] = date
+    cracked
+  end
 end
