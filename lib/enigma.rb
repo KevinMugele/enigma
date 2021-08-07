@@ -7,11 +7,11 @@ class Enigma
   include Indexable
 
   def generate_key
-    "0" + rand(1000..9999).to_s
+    rand(99999).to_s.rjust(5, "0")
   end
 
   def get_todays_date
-    Date.today.strftime("%m%d%Y")
+    Date.today.strftime("%m%d%y")
   end
 
   def encrypt(message, key = generate_key, date = get_todays_date)
@@ -31,5 +31,4 @@ class Enigma
     decrypt["date"] = date
     decrypt
   end
-
 end

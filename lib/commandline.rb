@@ -1,6 +1,6 @@
 class CommandLine
 
-  attr_reader :input, :output, :message
+  attr_reader :input, :output, :message, :key, :date
 
   def initialize(argv)
     @input = argv[0]
@@ -26,8 +26,4 @@ class CommandLine
     write_to_file(@output, decrypted["decryption"])
     "Created '#{output}'' with the key #{decrypted["key"]} and date #{decrypted["date"]}"
   end
-
-
-
-
 end

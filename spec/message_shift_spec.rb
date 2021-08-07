@@ -24,7 +24,4 @@ RSpec.describe MessageShift do
 
     expect(message_shifter.decrypt_message("keder ohulw", "02715", "040895")).to eq("hello world")
   end
-
-
-
 end
