@@ -67,4 +67,5 @@ class MessageShift
     new_value = (index - shift_value) % 27
     find_char(new_value)
   end
+
 end
