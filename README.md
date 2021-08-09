@@ -11,7 +11,7 @@
 ## General info
 This project is  a program dedicated to encrypting and decrypting messages using the Ceaser Cipher. It allows a user to type a message in, use a key and a date, and encrypt or decrypt a message to a new text file.
 ## Screenshots
-![Website Picture](https://user-images.githubusercontent.com/83834410/128053930-e7533171-74e3-49e4-981f-ec2d4b1ded3e.png)
+![Picture](https://user-images.githubusercontent.com/82777170/128753621-3dacc39a-d344-488c-bb0f-4ae768b459dd.png)
 ## Learning Goals
 * Practice breaking a program into logical components
 * Build classes that demonstrate single responsibilities
