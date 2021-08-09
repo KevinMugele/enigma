@@ -35,10 +35,10 @@ class Enigma
   def crack(ciphertext, date = get_todays_date)
     message_shifter = MessageShift.new(message)
     key_cracker = KeyCrack.new(ciphertext)
-    cracked = {}
-    cracked["decryption"] = message_shifter.decrypt_message(ciphertext, key_cracker, date)
-    cracked["key"] = key_cracker
-    cracked["date"] = date
-    cracked
+    cracked = {
+      "decryption" => message_shifter.decrypt_message(ciphertext, key_cracker, date),
+      "key" => key_cracker,
+      "date" => date
+    }
   end
 end
