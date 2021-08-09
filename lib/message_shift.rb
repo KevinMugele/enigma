@@ -69,17 +69,15 @@ class MessageShift
   end
 
   def find_crack_key(date)
-    reversed_message = @message.reverse
-    indexes = []
-    reversed_message[0..3].chars.each do |char|
-      indexes << find_index(char)
-    end
+    reversed_message = @message.chars.reverse
+    message_length = @message.length % 4
+
     offset = ShiftCreator.square_number_last_four(date)
     key_hash = {}
-    key_hash["A"] = (indexes[0] - find_index("d")) - #offset
-    key_hash["B"] = (indexes[1] - find_index("n")) - #offset
-    key_hash["C"] = (indexes[2] - find_index("e")) - #offset
-    key_hash["D"] = (indexes[3] - find_index(" ")) - #offset
+    key_hash["A"] = (find_index(reversed_message[0]) - find_index("d")) #- #offset
+    key_hash["B"] = (find_index(reversed_message[1]) - find_index("n")) #- #offset
+    key_hash["C"] = (find_index(reversed_message[2]) - find_index("e")) #- #offset
+    key_hash["D"] = (find_index(reversed_message[3]) - find_index(" ")) #- #offset
     key_hash
   end
 end
