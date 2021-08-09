@@ -40,16 +40,17 @@ RSpec.describe Enigma do
   it "encrypt a message using todays date" do
     enigma = Enigma.new
     encrypted = enigma.encrypt("hello world", "02715")
+    expected_date = Date.today.strftime("%m%d%y")
 
-
-    expect(encrypted).to eq({"date"=>"080921", "encryption" => "rgfaybqdany", "key"=>"02715"})
+    expect(encrypted).to eq({"date"=> expected_date, "encryption" => "rgfaybqdany", "key"=>"02715"})
   end
 
   it "decrypts a message with a key" do
     enigma = Enigma.new
     encrypted = enigma.encrypt("hello world", "02715")
+    expected_date = Date.today.strftime("%m%d%y")
 
-    expect(enigma.decrypt(encrypted["encryption"], "02715")).to eq({"date"=>"080921", "decryption" => "hello world", "key"=>"02715"})
+    expect(enigma.decrypt(encrypted["encryption"], "02715")).to eq({"date"=> expected_date, "decryption" => "hello world", "key"=>"02715"})
   end
 
   it "#create_index" do
