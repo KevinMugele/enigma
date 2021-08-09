@@ -53,7 +53,7 @@ List of features ready and TODOs for future development
 ## Self Evaluation
 | Functionality | Object Oriented Programming | Ruby Conventions and Mechanics | Test Driven Development |
 | ------------- |:---------------------------:| ------------------------------:|------------------------:|
-| 3.5.          | 4                           | 3                              |4.                       |
+| 3.5.          | 4                           | 3                              |4                      |
 | I was able to get the crack method functional, but it definitely needs improvement and refactoring.     | A module has been used and I am able to explain why it is being used.      |  Syntax is correct and methods, classes and variables are well named. Code could be refactored to be cleaner / more effective | Test coverage metics show 100%. Mocks and Stubs were used to make testing more robust.
 
 ## Contact
