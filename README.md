@@ -6,7 +6,8 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
+* [Future Enhancements](#future-enhancements)
+* [Self Evaluation](#self-evaluation)
 * [Contact](#contact)
 ## General info
 This project is  a program dedicated to encrypting and decrypting messages using the Ceaser Cipher. It allows a user to type a message in, use a key and a date, and encrypt or decrypt a message to a new text file.
@@ -50,6 +51,8 @@ List of features ready and TODOs for future development
 * Able to decrypt a message using a known date or today's date
 ## Future Enhancements:
 * Crack the key for a message if the key is not known
+## Self Evaluation
+* 
 ## Contact
 Created by
 * [@kevinmugele](https://github.com/KevinMugele)
