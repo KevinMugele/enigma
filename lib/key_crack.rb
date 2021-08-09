@@ -5,6 +5,8 @@ require './lib/shift_creator.rb'
 class KeyCrack
   include Indexable
 
+  attr_reader :ciphertext
+
   def initialize(ciphertext)
     @ciphertext = ciphertext
   end

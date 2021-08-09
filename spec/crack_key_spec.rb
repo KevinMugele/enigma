@@ -1,10 +1,23 @@
 require './spec/spec_helper'
-require './lib/crack_key'
+require './lib/key_crack'
 
 RSpec.describe KeyCrack do
-  xit "finds_crack_key" do
-    message_shifter = MessageShift.new("keder ohulwthnw")
+  it "exists and has attributes" do
+    key_cracker = KeyCrack.new("keder ohulwthnw")
 
-    expect(message_shifter.find_crack_key("040895")).to eq({})
+    expect(key_cracker).to be_a KeyCrack
+    expect(key_cracker.ciphertext).to eq("keder ohulwthnw")
+  end
+
+  it "finds_offset" do
+    key_cracker = KeyCrack.new("keder ohulwthnw")
+
+    expect(key_cracker.find_offset("040895")).to eq("1025")
+  end
+
+  xit "finds_crack_key" do
+    key_cracker = KeyCrack.new("keder ohulwthnw")
+
+    expect(key_cracker.find_crack_key("040895")).to eq({})
   end
 end
