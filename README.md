@@ -6,7 +6,6 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
-* [Future Enhancements](#future-enhancements)
 * [Self Evaluation](#self-evaluation)
 * [Contact](#contact)
 ## General info
@@ -49,8 +48,8 @@ List of features ready and TODOs for future development
 * Able to use today's date if no date is provided
 * Able to decrypt a message with a known key
 * Able to decrypt a message using a known date or today's date
-## Future Enhancements:
-* Crack the key for a message if the key is not known
+* Able to crack the key for a message and decrypt it
+
 ## Self Evaluation
 | Functionality | Object Oriented Programming | Ruby Conventions and Mechanics | Test Driven Development |
 | ------------- |:---------------------------:| ------------------------------:|------------------------:|
