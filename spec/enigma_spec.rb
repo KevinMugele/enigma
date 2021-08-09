@@ -77,7 +77,6 @@ RSpec.describe Enigma do
 
   it "cracks a message" do
     enigma = Enigma.new
-    encrypted = enigma.encrypt("hello world", "02715")
 
     expect(enigma.crack("keder ohulwthnw", "040895")).to eq({"date"=>"040895", "decryption" => "hello world end", "key"=>"02715"})
   end

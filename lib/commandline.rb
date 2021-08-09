@@ -28,4 +28,11 @@ class CommandLine
     write_to_file(@output, decrypted["decryption"])
     "Created '#{output}'' with the key #{decrypted["key"]} and date #{decrypted["date"]}"
   end
+
+  def crack_message
+    ciphertext = @message
+    cracked = @enigma.crack(ciphertext, @key)
+    write_to_file(@output, cracked["decryption"])
+    "Created '#{output}'' with the cracked key #{cracked["key"]} and date #{cracked["date"]}"
+  end
 end
