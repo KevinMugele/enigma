@@ -1,3 +1,5 @@
+require './lib/enigma'
+
 class CommandLine
 
   attr_reader :input, :output, :message, :key, :date
