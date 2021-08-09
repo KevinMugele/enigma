@@ -16,20 +16,20 @@ class Enigma
 
   def encrypt(message, key = generate_key, date = get_todays_date)
     message_shifter = MessageShift.new(message)
-    encrypt = {}
-    encrypt["encryption"] = message_shifter.shift_message(key, date)
-    encrypt["key"] = key
-    encrypt["date"] = date
-    encrypt
+    encrypt = {
+      "encryption" => message_shifter.shift_message(key, date),
+      "key" => key,
+      "date" => date
+    }
   end
 
   def decrypt(message, key, date = get_todays_date)
     message_shifter = MessageShift.new(message)
-    decrypt = {}
-    decrypt["decryption"] = message_shifter.decrypt_message(message, key, date)
-    decrypt["key"] = key
-    decrypt["date"] = date
-    decrypt
+    decrypt = {
+      "decryption" => message_shifter.decrypt_message(message, key, date),
+      "key" => key,
+      "date" => date
+    }
   end
 
   def crack(ciphertext, date = get_todays_date)
