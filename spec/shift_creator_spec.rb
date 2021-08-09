@@ -1,5 +1,4 @@
 require './spec/spec_helper'
-require 'date'
 require './lib/enigma'
 require './lib/shift_creator'
 

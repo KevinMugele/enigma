@@ -1,9 +1,8 @@
 require './spec/spec_helper'
-require 'date'
 require './lib/enigma'
 require './lib/shift_creator'
 require './lib/message_shift'
-require './lib/indexable'
+
 
 RSpec.describe MessageShift do
   it "exists and has attributes" do

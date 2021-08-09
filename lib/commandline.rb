@@ -1,4 +1,5 @@
 require './lib/enigma'
+require './lib/key_crack'
 
 class CommandLine
 
@@ -30,8 +31,7 @@ class CommandLine
   end
 
   def crack_message
-    ciphertext = @message
-    cracked = @enigma.crack(ciphertext, @key)
+    cracked = @enigma.crack(@message, @key)
     write_to_file(@output, cracked["decryption"])
     "Created '#{output}'' with the cracked key #{cracked["key"]} and date #{cracked["date"]}"
   end
