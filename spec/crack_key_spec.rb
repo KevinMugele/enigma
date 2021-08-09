@@ -12,12 +12,12 @@ RSpec.describe KeyCrack do
   it "finds_offset" do
     key_cracker = KeyCrack.new("keder ohulwthnw")
 
-    expect(key_cracker.find_offset("040895")).to eq("1025")
+    expect(key_cracker.find_offset("040895")).to eq(1025)
   end
 
-  xit "finds_crack_key" do
+  it "finds_crack_key" do
     key_cracker = KeyCrack.new("keder ohulwthnw")
 
-    expect(key_cracker.find_crack_key("040895")).to eq({})
+    expect(key_cracker.finds_crack_key("040895")).to eq("02715")
   end
 end
