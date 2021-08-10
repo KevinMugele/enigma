@@ -6,12 +6,12 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
+* [Self Evaluation](#self-evaluation)
 * [Contact](#contact)
 ## General info
 This project is  a program dedicated to encrypting and decrypting messages using the Ceaser Cipher. It allows a user to type a message in, use a key and a date, and encrypt or decrypt a message to a new text file.
 ## Screenshots
-![Website Picture](https://user-images.githubusercontent.com/83834410/128053930-e7533171-74e3-49e4-981f-ec2d4b1ded3e.png)
+![Picture](https://user-images.githubusercontent.com/82777170/128753621-3dacc39a-d344-488c-bb0f-4ae768b459dd.png)
 ## Learning Goals
 * Practice breaking a program into logical components
 * Build classes that demonstrate single responsibilities
@@ -48,8 +48,14 @@ List of features ready and TODOs for future development
 * Able to use today's date if no date is provided
 * Able to decrypt a message with a known key
 * Able to decrypt a message using a known date or today's date
-## Future Enhancements:
-* Crack the key for a message if the key is not known
+* Able to crack the key for a message and decrypt it
+
+## Self Evaluation
+| Functionality | Object Oriented Programming | Ruby Conventions and Mechanics | Test Driven Development |
+| ------------- |:---------------------------:| ------------------------------:|------------------------:|
+| 3.5.          | 4                           | 3                              |4                      |
+| I was able to get the crack method functional, but it definitely needs improvement and refactoring.     | A module has been used and I am able to explain why it is being used.      |  Syntax is correct and methods, classes and variables are well named. Code could be refactored to be cleaner / more effective | Test coverage metics show 100%. Mocks and Stubs were used to make testing more robust.
+
 ## Contact
 Created by
 * [@kevinmugele](https://github.com/KevinMugele)
