@@ -42,7 +42,7 @@ RSpec.describe Enigma do
     encrypted = enigma.encrypt("hello world", "02715")
     expected_date = Date.today.strftime("%m%d%y")
 
-    expect(encrypted).to eq({"date"=> expected_date, "encryption" => "rgfaybqdany", "key"=>"02715"})
+    expect(encrypted).to eq({"date"=> expected_date, "encryption" => "lifasdqdvpy", "key"=>"02715"})
   end
 
   it "decrypts a message with a key" do
